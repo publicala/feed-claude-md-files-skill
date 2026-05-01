@@ -1,0 +1,9 @@
+{
+  "name": "feed-claude-md-files",
+  "description": "Surfaces recurring patterns in commits and corrections, proposes them as new CLAUDE.md rules.",
+  "version": "1.0.0",
+  "author": { "name": "Publica.la" },
+  "repository": "https://github.com/publicala/feed-claude-md-files-skill",
+  "license": "MIT",
+  "keywords": ["claude-md", "patterns", "feedback", "context-optimization"]
+}

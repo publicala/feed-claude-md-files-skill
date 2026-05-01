@@ -1,0 +1,14 @@
+{
+  "name": "publicala",
+  "metadata": {
+    "description": "Claude Code plugins by Publica.la"
+  },
+  "owner": { "name": "Publica.la" },
+  "plugins": [
+    {
+      "name": "feed-claude-md-files",
+      "source": "./",
+      "description": "Surfaces recurring patterns in commits and corrections, proposes them as new CLAUDE.md rules."
+    }
+  ]
+}
