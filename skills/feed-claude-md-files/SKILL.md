@@ -2,8 +2,6 @@
 name: feed-claude-md-files
 description: >
   Surfaces recurring patterns in recent commits and in-session corrections, proposes them as new CLAUDE.md rules in the right file (root or scoped subdir), and writes them only after approval. The inverse of bake-claude-md-files.
-
-
 user-invocable: true
 disable-model-invocation: true
 ---
