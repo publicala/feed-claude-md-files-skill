@@ -1,9 +1,9 @@
 ---
 name: feed-claude-md-files
 description: >
-  Surfaces recurring patterns in recent commits and in-session corrections,
-  proposes them as new CLAUDE.md rules in the right file (root or scoped subdir),
-  and writes them only after approval. The inverse of bake-claude-md-files.
+  Surfaces recurring patterns in recent commits and in-session corrections, proposes them as new CLAUDE.md rules in the right file (root or scoped subdir), and writes them only after approval. The inverse of bake-claude-md-files.
+
+
 user-invocable: true
 disable-model-invocation: true
 ---
@@ -13,11 +13,13 @@ Read recent git history (commits + diffs), the current conversation's user corre
 Cluster recurring patterns into candidate rules. A pattern is anything that recurs: the same correction asked for twice, the same kind of edit across multiple commits, the same nit, the same naming or style choice, the same architectural decision applied repeatedly.
 
 For each candidate, decide:
+
 - Whether it duplicates an existing CLAUDE.md rule (drop)
 - Whether it would be better expressed as a tooling check (lint, static analysis, CI, hook) — if so, propose deferring to `/bake-claude-md-files` instead of writing prose
 - Which CLAUDE.md file it belongs in: a scoped subdir (preferred when the pattern only applies there) or root (only when the rule genuinely cuts across the project)
 
 Use `AskUserQuestion` to propose each rule with:
+
 - The exact rule text
 - The target file path (suggested; let the user pick another)
 - Optionally: defer-to-bake instead of writing prose
@@ -34,6 +36,7 @@ Only write after approval. Create the target file if it does not exist. Append u
 ## Scope: project files only
 
 This skill writes **only** to CLAUDE.md files inside the current project tree. Never write to:
+
 - `~/.claude/` — global skills, settings, or user memory
 - `~/.claude/projects/*/memory/` — auto-memory files (read-only input)
 - Any path outside the project root
@@ -52,6 +55,7 @@ Reads from `~/.claude/projects/*/memory/` are fine; writes only ever land in the
 Default to the smallest scope that still captures the rule. Promote to root only when the rule genuinely cuts across the project.
 
 Examples:
+
 - React component pattern → `src/components/CLAUDE.md`
 - Eloquent model convention → `app/Models/CLAUDE.md`
 - Test layout rule → `tests/CLAUDE.md`
@@ -68,6 +72,7 @@ Examples:
 ## Pairs with bake
 
 `feed` and `bake` are a loop:
+
 - `feed` adds prose rules from observed patterns
 - `bake` converts crystallized prose rules into tooling and removes them from CLAUDE.md
 

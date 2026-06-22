@@ -55,7 +55,7 @@ Run it after a working session — once you've accumulated commits and correctio
 ## Pairs with `bake`
 
 | Direction | Skill | What it does |
-|-----------|-------|--------------|
+| --- | --- | --- |
 | Patterns → prose rules | `feed` | Watches what you do, proposes new CLAUDE.md rules |
 | Prose rules → tooling | `bake` | Replaces prose rules with linter / static-analysis / CI checks |
 
