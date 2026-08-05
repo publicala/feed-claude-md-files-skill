@@ -69,6 +69,7 @@ Examples:
 - Add a `Why:` line when the reason is non-obvious — future-you will thank you when judging edge cases
 - Match the existing CLAUDE.md voice in the file you're appending to
 - Verify every symbol an example references against the real codebase: an example calling a method that does not exist teaches a wrong API and is worse than no example
+- Write rules precise but generic: keep load-bearing identifiers exact, never enumerate driftable inventories (class lists, file lists, counts)
 
 ## The trio
 
