@@ -1,7 +1,7 @@
 ---
 name: feed-claude-md-files
 description: >
-  Surfaces recurring patterns in recent commits and in-session corrections, proposes them as new CLAUDE.md rules in the right file (root or scoped subdir), and writes them only after approval. The inverse of bake-claude-md-files.
+  Surfaces recurring patterns in recent commits and in-session corrections, proposes them as new CLAUDE.md rules in the right file, and writes them only after approval. The inverse of bake-claude-md-files.
 user-invocable: true
 disable-model-invocation: true
 ---
@@ -44,8 +44,6 @@ Reads from `~/.claude/projects/*/memory/` are fine; writes only ever land in the
 ## What to skip
 
 - One-off corrections that look situational
-- Rules better expressed as automated checks → point at `/bake-claude-md-files`
-- Anything already covered by an existing CLAUDE.md rule
 - Style preferences already enforced by linters/formatters in the repo
 - Anything a fresh session derives with a few tool calls (setup commands, stack inventories, directory layouts): inventory, not instruction
 - Conventions the codebase already demonstrates nearly everywhere: a new session copies its neighbors without being told; write the rule only where the dominant pattern is the wrong one
