@@ -70,6 +70,7 @@ Examples:
 - Match the existing CLAUDE.md voice in the file you're appending to
 - Verify every symbol an example references against the real codebase: an example calling a method that does not exist teaches a wrong API and is worse than no example
 - Write rules precise but generic: keep load-bearing identifiers exact, never enumerate driftable inventories (class lists, file lists, counts)
+- Write the rule for the class of mistake, not the incident that revealed it: the correction that prompted a rule is evidence for it, never phrasing to copy
 
 ## The trio
 
