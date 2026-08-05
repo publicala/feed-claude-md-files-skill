@@ -48,6 +48,8 @@ Reads from `~/.claude/projects/*/memory/` are fine; writes only ever land in the
 - Anything a fresh session derives with a few tool calls (setup commands, stack inventories, directory layouts): inventory, not instruction
 - Conventions the codebase already demonstrates nearly everywhere: a new session copies its neighbors without being told; write the rule only where the dominant pattern is the wrong one
 
+The last two reasons are claims about what a fresh session does, and the loaded model making them has already read everything it claims that session would derive. Before skipping a candidate for either, run a clean-context probe: give one fresh low-effort agent the task that surfaced the pattern, without the rule, and record whether it makes the mistake the rule would prevent. The probe decides the skip. The other reasons are checkable directly and never probe. A wrongly written rule gets pruned by a later audit, a wrongly skipped one is gone for good, so the probe guards the skip side.
+
 ## Targeted vs root
 
 Default to the smallest scope that still captures the rule. Promote to root only when the rule genuinely cuts across the project.
