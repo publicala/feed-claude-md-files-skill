@@ -67,11 +67,10 @@ Examples:
 - Add a `Why:` line when the reason is non-obvious — future-you will thank you when judging edge cases
 - Match the existing CLAUDE.md voice in the file you're appending to
 
-## Pairs with bake
+## The trio
 
-`feed` and `bake` are a loop:
+- `feed-claude-md-files` adds rules from observed patterns
+- `bake-claude-md-files` converts crystallized rules into tooling and removes the prose
+- `audit-claude-md-files` prunes and verifies what remains
 
-- `feed` adds prose rules from observed patterns
-- `bake` converts crystallized prose rules into tooling and removes them from CLAUDE.md
-
-Run `feed` after a working session; run `bake` once enough rules have accumulated to be worth automating.
+Run `feed` after a working session, `bake` once enough rules have accumulated to be worth automating, and `audit` when CLAUDE.md files have grown without review.

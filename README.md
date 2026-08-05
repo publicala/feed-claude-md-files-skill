@@ -2,7 +2,7 @@
 
 Claude Code skill — surfaces recurring patterns in recent commits and in-session corrections, proposes them as new CLAUDE.md rules in the right file (root or scoped subdir), and writes them only after approval.
 
-The inverse of [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill): `feed` adds prose rules from observed patterns; `bake` converts crystallized prose rules into tooling once they're stable.
+The CLAUDE.md trio: [feed-claude-md-files](https://github.com/publicala/feed-claude-md-files-skill) adds rules from observed patterns, [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill) converts crystallized rules into tooling, and [audit-claude-md-files](https://github.com/publicala/audit-claude-md-files-skill) prunes and verifies what remains. Install all three from [publicala/claude-plugins](https://github.com/publicala/claude-plugins).
 
 ## How it works
 
@@ -14,19 +14,17 @@ The inverse of [bake-claude-md-files](https://github.com/publicala/bake-claude-m
 
 ## Install
 
-The repo doubles as a plugin marketplace (required by Claude Code for `plugin install` to work). `marketplace.json` points to the plugin in this same repo.
+### Via Plugin Marketplace
+
+```
+/plugin marketplace add publicala/claude-plugins
+/plugin install feed-claude-md-files@publicala
+```
 
 ### Via skills.sh
 
 ```bash
 npx skills add publicala/feed-claude-md-files-skill
-```
-
-### Via Plugin Marketplace
-
-```
-/plugin marketplace add publicala/feed-claude-md-files-skill
-/plugin install feed-claude-md-files@publicala
 ```
 
 ### Manual
@@ -45,25 +43,15 @@ cp skills/feed-claude-md-files/SKILL.md .claude/skills/feed-claude-md-files/
 
 ## Usage
 
-Both installation methods invoke the same skill:
-
 - **skills.sh / manual**: `/feed-claude-md-files`
-- **Plugin marketplace**: `/feed-claude-md-files:feed`
+- **Plugin marketplace**: `/feed-claude-md-files:feed-claude-md-files` (plugin skills are namespaced as `/<plugin>:<skill>`)
 
 Run it after a working session — once you've accumulated commits and corrections worth distilling.
 
-## Pairs with `bake`
-
-| Direction | Skill | What it does |
-| --- | --- | --- |
-| Patterns → prose rules | `feed` | Watches what you do, proposes new CLAUDE.md rules |
-| Prose rules → tooling | `bake` | Replaces prose rules with linter / static-analysis / CI checks |
-
-The loop: `feed` after a session, `bake` once rules have stabilized.
-
 ## Resources
 
-- [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill) — the inverse skill
+- [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill) — converts CLAUDE.md rules into automated checks
+- [audit-claude-md-files](https://github.com/publicala/audit-claude-md-files-skill) — prunes CLAUDE.md files with evidence-backed cuts
 - [CLAUDE.md Guide](https://github.com/publicala/claude-md-guide) — Presentation slides about CLAUDE.md files
 - [CLAUDE.md docs](https://docs.anthropic.com/en/docs/claude-code/memory) — Official documentation
 
