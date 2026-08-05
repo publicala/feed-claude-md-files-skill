@@ -47,6 +47,8 @@ Reads from `~/.claude/projects/*/memory/` are fine; writes only ever land in the
 - Rules better expressed as automated checks → point at `/bake-claude-md-files`
 - Anything already covered by an existing CLAUDE.md rule
 - Style preferences already enforced by linters/formatters in the repo
+- Anything a fresh session derives with a few tool calls (setup commands, stack inventories, directory layouts): inventory, not instruction
+- Conventions the codebase already demonstrates nearly everywhere: a new session copies its neighbors without being told; write the rule only where the dominant pattern is the wrong one
 
 ## Targeted vs root
 
@@ -66,6 +68,7 @@ Examples:
 - One short paragraph, or a tight bullet list
 - Add a `Why:` line when the reason is non-obvious — future-you will thank you when judging edge cases
 - Match the existing CLAUDE.md voice in the file you're appending to
+- Verify every symbol an example references against the real codebase: an example calling a method that does not exist teaches a wrong API and is worse than no example
 
 ## The trio
 
