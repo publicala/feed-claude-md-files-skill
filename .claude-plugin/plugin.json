@@ -1,7 +1,7 @@
 {
   "name": "feed-claude-md-files",
   "description": "Surfaces recurring patterns in commits and corrections, proposes them as new CLAUDE.md rules.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": {
     "name": "Publica.la"
   },

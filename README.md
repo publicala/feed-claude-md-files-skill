@@ -2,7 +2,7 @@
 
 Claude Code skill — surfaces recurring patterns in recent commits and in-session corrections, proposes them as new CLAUDE.md rules in the right file (root or scoped subdir), and writes them only after approval.
 
-The CLAUDE.md trio: [feed-claude-md-files](https://github.com/publicala/feed-claude-md-files-skill) adds rules from observed patterns, [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill) converts crystallized rules into tooling, and [audit-claude-md-files](https://github.com/publicala/audit-claude-md-files-skill) prunes and verifies what remains. Install all three from [publicala/claude-plugins](https://github.com/publicala/claude-plugins).
+The CLAUDE.md quartet: [feed-claude-md-files](https://github.com/publicala/feed-claude-md-files-skill) adds rules from observed patterns, [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill) converts crystallized rules into tooling, [audit-claude-md-files](https://github.com/publicala/audit-claude-md-files-skill) prunes and verifies what remains, and [split-claude-md-files](https://github.com/publicala/split-claude-md-files-skill) moves what remains to the scope that reads it. Install all four from [publicala/claude-plugins](https://github.com/publicala/claude-plugins).
 
 ## How it works
 
@@ -52,6 +52,7 @@ Run it after a working session — once you've accumulated commits and correctio
 
 - [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill) — converts CLAUDE.md rules into automated checks
 - [audit-claude-md-files](https://github.com/publicala/audit-claude-md-files-skill) — prunes CLAUDE.md files with evidence-backed cuts
+- [split-claude-md-files](https://github.com/publicala/split-claude-md-files-skill) — moves CLAUDE.md rules to the load scope that reads them
 - [CLAUDE.md Guide](https://github.com/publicala/claude-md-guide) — Presentation slides about CLAUDE.md files
 - [CLAUDE.md docs](https://docs.anthropic.com/en/docs/claude-code/memory) — Official documentation
 

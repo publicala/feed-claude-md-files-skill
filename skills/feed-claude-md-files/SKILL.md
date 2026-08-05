@@ -72,10 +72,11 @@ Examples:
 - Write rules precise but generic: keep load-bearing identifiers exact, never enumerate driftable inventories (class lists, file lists, counts)
 - Write the rule for the class of mistake, not the incident that revealed it: the correction that prompted a rule is evidence for it, never phrasing to copy
 
-## The trio
+## The quartet
 
 - `feed-claude-md-files` adds rules from observed patterns
 - `bake-claude-md-files` converts crystallized rules into tooling and removes the prose
 - `audit-claude-md-files` prunes and verifies what remains
+- `split-claude-md-files` moves what remains to the scope that reads it
 
-Run `feed` after a working session, `bake` once enough rules have accumulated to be worth automating, and `audit` when CLAUDE.md files have grown without review.
+Run `feed` after a working session, `bake` once enough rules have accumulated to be worth automating, `audit` when CLAUDE.md files have grown without review, and `split` after an audit leaves a resident file carrying rules that govern one area.
