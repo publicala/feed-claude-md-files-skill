@@ -71,6 +71,7 @@ Examples:
 - Verify every symbol an example references against the real codebase: an example calling a method that does not exist teaches a wrong API and is worse than no example
 - Write rules precise but generic: keep load-bearing identifiers exact, never enumerate driftable inventories (class lists, file lists, counts)
 - Write the rule for the class of mistake, not the incident that revealed it: the correction that prompted a rule is evidence for it, never phrasing to copy
+- Never add self-referential document metadata or biography: version stamps, "last updated" lines, rename history, drift-tracking clauses between files, rules phrased against the past ("previously X, now Z"). State the rule present tense. Git is the history, and the audit cuts these on sight
 
 ## The quartet
 
