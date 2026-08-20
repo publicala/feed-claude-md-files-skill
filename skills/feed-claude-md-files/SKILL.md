@@ -22,6 +22,8 @@ Use `AskUserQuestion` to propose each rule with:
 - The target file path (suggested; let the user pick another)
 - Optionally: defer-to-bake instead of writing prose
 
+When the candidate list is long (more than AskUserQuestion comfortably carries), first ask whether the user wants the proposals as an interactive artifact instead: a live doc (`capabilities: {artifact: {}}`) listing each candidate with its exact rule text, repo-relative target path, an approve checkbox, and a free-text input for rewording, plus a copy-decisions control as the fallback path back into the session.
+
 Only write after approval. Create the target file if it does not exist. Append under an appropriate heading; never duplicate or near-duplicate an existing rule.
 
 ## Signal priority
