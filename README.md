@@ -1,5 +1,7 @@
 # feed-claude-md-files
 
+> [!IMPORTANT] **This repo has moved.** The skill now lives as `/bonsai:feed` in the [bonsai plugin](https://github.com/publicala/claude-plugins/tree/main/plugins/bonsai) inside [publicala/claude-plugins](https://github.com/publicala/claude-plugins). Install with `/plugin marketplace add publicala/claude-plugins` then `/plugin install bonsai@publicala`. This repo is archived and kept for history.
+
 Claude Code skill — surfaces recurring patterns in recent commits and in-session corrections, proposes them as new CLAUDE.md rules in the right file (root or scoped subdir), and writes them only after approval.
 
 The CLAUDE.md quartet: [feed-claude-md-files](https://github.com/publicala/feed-claude-md-files-skill) adds rules from observed patterns, [bake-claude-md-files](https://github.com/publicala/bake-claude-md-files-skill) converts crystallized rules into tooling, [audit-claude-md-files](https://github.com/publicala/audit-claude-md-files-skill) prunes and verifies what remains, and [split-claude-md-files](https://github.com/publicala/split-claude-md-files-skill) moves what remains to the scope that reads it. Install all four from [publicala/claude-plugins](https://github.com/publicala/claude-plugins).
